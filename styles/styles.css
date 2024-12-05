@@ -12,20 +12,109 @@
     5. Media Queries
 ////////////////////////*/
 
-/* ------------------------------- 1. Global Styles -------------------------------- */
+/*Paars #5722CD;
+Blauw #4845E4;
+Roze #ED4385;
+Zwart #0C0C0C (voor standaard tekst);
+Lichtpaars #F2F0FF (voor de grote zwevende woorden, zoals "hello" en "services")
+Uitzonderingen:
+Lichtgrijs #F3F6F9 (voor de achtergrond van de projecten)
+Grijs #7A7A7A (voor de service-tegel tekst);*/
 
+/* ------------------------------- 1. Global Styles -------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Oleo+Script+Swash+Caps:wght@400;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Oleo+Script+Swash+Caps:wght@400;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Roboto, serif;
+}
+
+button {
+    padding: 11px 25px;
+    border-radius: 20px;
+    border: transparent;
+    text-transform: uppercase;
+    font-size: 10px;
+    background-color: #ED4385;
+    color: #FFFFFF;
+    box-shadow: 0 1px 10px #303030;
+}
 /* ------------------------------- 2. Typography ----------------------------------- */
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: Merriweather, serif;
+}
+
 
 /* ------------------------------- 3. Layout --------------------------------------- */
 
 /* --------------- 3.1 Reusables ----------------------- */
 
+.outer-content-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.inner-content-container {
+    max-width: 1400px;
+    text-align: center;
+}
+
+.text-basic {
+    max-width: 850px;
+    /*text-align: center;*/
+}
 /* --------------- 3.2 Other --------------------------- */
 
 /* ------------------------------- 4. Areas ---------------------------------------- */
 
 /* --------------- 4.1 Header ------------------------- */
 
+header {
+    background: rgb(72, 69, 228);
+    background: linear-gradient(90deg, rgba(72, 69, 228, 1) 0%, rgba(87, 34, 205, 1) 100%);
+    color: #FFFFFF;
+}
+
+.nav-top {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.nav-top ul {
+    display: flex;
+    flex-basis: 400px;
+    justify-content: space-between;
+    list-style: none;
+    padding: 1em;
+}
+
+li:hover {
+    cursor: pointer;
+}
+
+.text-header {
+    padding: 40px 100px;
+    text-align: center;
+}
+
 /* --------------- 4.2 Introduction ------------------- */
+
+/* --------------- 4.3 Work ------------------- */
+
+.work-images {
+    width: 100%;
+}
+
+/* --------------- 4.4 Form ------------------- */
+
+/* --------------- 4.5 Footer ------------------- */
 
 /* ------------------------------- 5. Media Queries -------------------------------- */
