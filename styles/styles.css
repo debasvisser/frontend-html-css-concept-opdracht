@@ -33,24 +33,58 @@ Grijs #7A7A7A (voor de service-tegel tekst);*/
 
 body {
     font-family: Roboto, serif;
+    font-weight: 300;
+    font-size: 20px;
 }
 
 button {
-    padding: 11px 25px;
+    padding: 15px 25px;
+    margin: 20px;
     border-radius: 20px;
     border: transparent;
     text-transform: uppercase;
-    font-size: 10px;
+    font-size: 11px;
+    font-weight: 300;
     background-color: #ED4385;
     color: #FFFFFF;
     box-shadow: 0 1px 10px #303030;
 }
+
+button:hover {
+    cursor: pointer;
+}
+
+a, a:visited {
+    text-decoration-line: none;
+    color: #5722CD;
+}
+
 /* ------------------------------- 2. Typography ----------------------------------- */
 
 h1, h2, h3, h4, h5, h6 {
     font-family: Merriweather, serif;
 }
 
+h1 {
+    font-size: 32px;
+    line-height: 1.25;
+    padding: 15px 0;
+}
+
+h3 {
+    font-size: 32px;
+}
+
+h4 {
+    font-size: 32px;
+
+}
+
+h6 {
+    font-size: 25px;
+    line-height: 1.5;
+    padding: 12px 0;
+}
 
 /* ------------------------------- 3. Layout --------------------------------------- */
 
@@ -59,17 +93,28 @@ h1, h2, h3, h4, h5, h6 {
 .outer-content-container {
     width: 100%;
     display: flex;
+    flex-direction: row;
     justify-content: center;
 }
 
 .inner-content-container {
-    max-width: 1400px;
-    text-align: center;
+    flex-basis: 1400px;
+    flex-grow: 0;
+    flex-shrink: 1;
+    margin: 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .text-basic {
+    /*padding: 60px 250px;*/
     max-width: 850px;
-    /*text-align: center;*/
+    text-align: center;
+}
+
+.padding-basic {
+    padding: 60px 0;
 }
 /* --------------- 3.2 Other --------------------------- */
 
@@ -81,11 +126,13 @@ header {
     background: rgb(72, 69, 228);
     background: linear-gradient(90deg, rgba(72, 69, 228, 1) 0%, rgba(87, 34, 205, 1) 100%);
     color: #FFFFFF;
+    padding: 20px 0;
 }
 
 .nav-top {
     display: flex;
     justify-content: flex-end;
+    width: 100%;
 }
 
 .nav-top ul {
@@ -93,28 +140,74 @@ header {
     flex-basis: 400px;
     justify-content: space-between;
     list-style: none;
-    padding: 1em;
 }
 
-li:hover {
-    cursor: pointer;
-}
-
-.text-header {
-    padding: 40px 100px;
-    text-align: center;
+.nav-top a {
+    color: #FFFFFF;
 }
 
 /* --------------- 4.2 Introduction ------------------- */
 
+.hello-text {
+    color: #5722CD;
+}
+
+.hello-contact {
+    font-size: 14px;
+    color: #000000;
+    margin-top: 50px;
+}
+
 /* --------------- 4.3 Work ------------------- */
 
+#work {
+    background-color: #F3F6F9;
+}
+
+.work-text-image {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /*margin-bottom: 20px;*/
+}
+
+.work-text-image:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.work-text-image div {
+    flex-basis: 480px;
+    flex-grow: 0;
+    flex-shrink: 0;
+    padding: 0 50px 60px 50px;
+}
+
+.work-text-image div span {
+    /*border: 2px dotted red;*/
+}
+
+.work-text-image a {
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
 .work-images {
-    width: 100%;
+    flex-basis: 800px;
+    flex-grow: 0;
+    flex-shrink: 1;
+}
+
+.work-images img {
+    box-shadow: 2px 3px 15px #303030;
+    width: 100%
 }
 
 /* --------------- 4.4 Form ------------------- */
 
-/* --------------- 4.5 Footer ------------------- */
+/* --------------- 4.5 Services ------------------- */
+
+/* --------------- 4.6 Footer ------------------- */
 
 /* ------------------------------- 5. Media Queries -------------------------------- */

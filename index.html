@@ -7,17 +7,16 @@
     <title>Business Website</title>
 </head>
 <body>
-
 <header class="outer-content-container">
     <div class="inner-content-container">
         <nav class="nav-top">
             <ul>
-                <li>Case Studies</li>
-                <li>Services</li>
-                <li>Contact Us</li>
+                <li><a href="#work">Case Studies</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact Us</a></li>
             </ul>
         </nav>
-        <div class="text-header text-basic">
+        <div class="text-basic padding-basic">
             <h1>Your website is an investment in the success of your business.</h1>
             <p>We are here to help you succeed.</p>
             <button type="button">Let's work together</button>
@@ -26,53 +25,61 @@
 </header>
 <main>
     <section class="outer-content-container">
-        <div>
-            <h2>Hello</h2>
-            <p>Rekupe is a digital agency in Los Angeles.</p>
-            <p>We use strategic UX, SEO optimization and beautiful visual designs to
-                help your business grow.</p>
-            <p>We see every project as a fresh opportunity, pushing ourselves to create new digital
-                experiences.</p>
+        <div class="inner-content-container padding-basic text-basic hello-text">
+            <!--            <h2>Hello</h2>-->
+            <h6>Rekupe is a digital agency in Los Angeles.</h6>
+            <h6>We use strategic UX, SEO optimization and beautiful visual designs to
+                help your business grow.</h6>
+            <h6>We see every project as a fresh opportunity, pushing ourselves to create new digital
+                experiences.</h6>
+
+            <p class="hello-contact">Have a question? <a href="">Click here</a> to contact us!</p>
         </div>
-        <p>Have a question? <a href="">Click here</a> to contact us!</p>
+    </section>
+    <section class="outer-content-container" id="work">
+        <div class="inner-content-container">
+            <article class="work-text-image padding-basic">
+                <!--            <h2>Work</h2>-->
+                <div>
+                    <h4>Rolling Stone</h4>
+                    <span></span>
+                    <p>You know Rolling Stone. It’s the definitive voice in music, politics and culture. It’s a global
+                        icon.</p>
+                    <a href="#">view projects</a>
+                </div>
+                <span class="work-images">
+                    <img src="assets/work-image-01.jpeg" alt="laptop with RollingStone site">
+                </span>
+            </article>
+            <article class="work-text-image padding-basic">
+                <div>
+                    <h4>Variety</h4>
+                    <span></span>
+                    <p>Variety is an industry leader for breaking entertainment news, reviews and box office results
+                        with
+                        archive of
+                        content dating back to 1905.</p>
+                    <a href="#">view projects</a>
+                </div>
+                <span class="work-images">
+                    <img src="assets/work-image-02.jpeg" alt="book with variety on the cover">
+                </span>
+            </article>
+            <article class="work-text-image padding-basic">
+                <div>
+                    <h4>Worth</h4>
+                    <span></span>
+                    <p>A global media platform connecting a community that embraces worth beyond wealth.</p>
+                    <a href="#">view projects</a>
+                </div>
+                <span class="work-images">
+                    <img src="assets/work-image-03.jpeg" alt="tablet with the variety 500">
+                </span>
+            </article>
+        </div>
     </section>
     <section class="outer-content-container">
-        <article>
-            <h2>Work</h2>
-            <div>
-                <h3>Rolling Stone</h3>
-
-                <p>You know Rolling Stone. It’s the definitive voice in music, politics and culture. It’s a global
-                    icon.</p>
-            </div>
-            <span class="work-images">
-                <img src="assets/work-image-01.jpeg" alt="laptop with RollingStone site">
-            </span>
-        </article>
-        <article>
-            <div>
-                <h3>Variety</h3>
-
-                <p>Variety is an industry leader for breaking entertainment news, reviews and box office results with
-                    archive of
-                    content dating back to 1905.</p>
-            </div>
-            <span class="work-images">
-                <img src="assets/work-image-02.jpeg" alt="book with variety on the cover">
-            </span>
-        </article>
-        <article>
-            <div>
-                <h3>Worth</h3>
-                <p>A global media platform connecting a community that embraces worth beyond wealth.</p>
-            </div>
-            <span class="work-images">
-                <img src="assets/work-image-03.jpeg" alt="tablet with the variety 500">
-            </span>
-        </article>
-    </section>
-    <section class="outer-content-container">
-        <h2>Services</h2>
+        <h2 id="services">Services</h2>
         <article>
             <h3>Web Design</h3> Good web design is how companies stand out from their competitors. High quality web
             design leads
@@ -122,20 +129,20 @@
             and ensure your messaging is focused and targeted.
         </article>
     </section>
-    <div class="outer-content-container">
+    <div class="outer-content-container" id="contact">
 
         Let's work together
 
         Have a question? Need a quote? Let us know!
         <form action="">
-        <label for="name">Name</label>
-        <input type="text" placeholder="Name" id="name">
-        <label for="email">Email</label>
-        <input type="email" placeholder="Email" id="email">
-        <label for="message">Message</label>
-        <input type="text" placeholder="Message" id="message">
-        <button>SEND</button>
-    </form>
+            <label for="name">Name</label>
+            <input type="text" placeholder="Name" id="name">
+            <label for="email">Email</label>
+            <input type="email" placeholder="Email" id="email">
+            <label for="message">Message</label>
+            <input type="text" placeholder="Message" id="message">
+            <button>SEND</button>
+        </form>
     </div>
 </main>
 <footer class="outer-content-container">
