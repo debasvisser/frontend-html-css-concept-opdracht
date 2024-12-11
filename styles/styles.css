@@ -66,26 +66,35 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-    font-size: 32px;
+    font-size: 35px;
     line-height: 1.25;
     padding: 15px 0;
 }
 
 h3 {
-    font-size: 32px;
+    font-size: 35px;
 }
 
 h4 {
-    font-size: 32px;
+    font-size: 35px;
 
 }
 
+h5 {
+    font-size: 22px;
+    color: #5722CD;
+    padding: 10px 0;
+}
+
 h6 {
-    font-size: 25px;
+    font-size: 35px;
     line-height: 1.5;
     padding: 12px 0;
 }
 
+p {
+    margin: 15px 0;
+}
 /* ------------------------------- 3. Layout --------------------------------------- */
 
 /* --------------- 3.1 Reusables ----------------------- */
@@ -146,6 +155,11 @@ header {
     color: #FFFFFF;
 }
 
+.squiggle-line-stripe {
+    width: 79px;
+    height: 128px;
+    background-image: url(assets/squiggle_line_stripe.svg);
+}
 /* --------------- 4.2 Introduction ------------------- */
 
 .hello-text {
@@ -182,8 +196,11 @@ header {
     padding: 0 50px 60px 50px;
 }
 
-.work-text-image div span {
-    /*border: 2px dotted red;*/
+.squiggle-line {
+    height: 6px;
+    width: 57px;
+    background-image: url("assets/squiggle_line.svg");
+    margin-top: 15px;
 }
 
 .work-text-image a {
@@ -200,14 +217,78 @@ header {
 }
 
 .work-images img {
-    box-shadow: 2px 3px 15px #303030;
+    box-shadow: 0 5px 20px #303030;
     width: 100%
 }
 
-/* --------------- 4.4 Form ------------------- */
+/* --------------- 4.4 Services ------------------- */
 
-/* --------------- 4.5 Services ------------------- */
+.services-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.services-container article {
+    border: 1px solid #5722CD;
+    box-shadow: 2px 2px 12px #858585;
+    padding: 30px;
+    margin: 20px;
+    flex-basis: 380px;
+    flex-grow: 0;
+    flex-shrink: 1;
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+}
+
+.services-container img {
+    width: 80px;
+}
+/* --------------- 4.5 Form ------------------- */
+
+#contact {
+    background: rgb(72, 69, 228);
+    background: linear-gradient(90deg, rgba(72, 69, 228, 1) 0%, rgba(87, 34, 205, 1) 100%);
+    color: white;
+    padding: 60px 0 30px 0;
+    font-size: 16px;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    text-align: left;
+}
+
+.form-container label {
+    font-size: 16px;
+    font-weight: 500;
+    padding: 20px 0;
+}
+
+.form-container input,
+.form-container textarea {
+    border-radius: 4px;
+    display: block;
+    font-family: Roboto, serif;
+    width: 100%;
+    padding: 15px;
+}
+
+.form-container button {
+    width: 150px;
+    align-self: center;
+}
 
 /* --------------- 4.6 Footer ------------------- */
 
+footer {
+    background-color: black;
+    color: white;
+    font-size: 14px;
+    padding: 15px 0;
+}
 /* ------------------------------- 5. Media Queries -------------------------------- */
