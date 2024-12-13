@@ -25,6 +25,16 @@ Grijs #7A7A7A (voor de service-tegel tekst);*/
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Oleo+Script+Swash+Caps:wght@400;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Oleo+Script+Swash+Caps:wght@400;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
+:root {
+    --purple: #5722CD;
+    --blue: #4845E4;
+    --pink: #ED4385;
+    --black: #0C0C0C; /* voor standaard tekst*/
+    --light-purple: #F2F0FF; /*voor de grote zwevende woorden, zoals "hello" en "services"*/
+    --light-grey: #F3F6F9; /*voor de achtergrond van de projecten*/
+    --grey: #7A7A7A; /* voor de service-tegel tekst*/
+    --white: #FFFFFF;
+}
 * {
     margin: 0;
     padding: 0;
@@ -45,8 +55,8 @@ button {
     text-transform: uppercase;
     font-size: 11px;
     font-weight: 300;
-    background-color: #ED4385;
-    color: #FFFFFF;
+    background-color: var(--pink);
+    color: var(--white);
     box-shadow: 0 1px 10px #303030;
 }
 
@@ -56,7 +66,7 @@ button:hover {
 
 a, a:visited {
     text-decoration-line: none;
-    color: #5722CD;
+    color: var(--purple);
 }
 
 /* ------------------------------- 2. Typography ----------------------------------- */
@@ -66,7 +76,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-    font-size: 35px;
+    font-size: 40px;
     line-height: 1.25;
     padding: 15px 0;
 }
@@ -77,12 +87,11 @@ h3 {
 
 h4 {
     font-size: 35px;
-
 }
 
 h5 {
     font-size: 22px;
-    color: #5722CD;
+    color: var(--purple);
     padding: 10px 0;
 }
 
@@ -117,7 +126,6 @@ p {
 }
 
 .text-basic {
-    /*padding: 60px 250px;*/
     max-width: 850px;
     text-align: center;
 }
@@ -132,9 +140,9 @@ p {
 /* --------------- 4.1 Header ------------------------- */
 
 header {
-    background: rgb(72, 69, 228);
-    background: linear-gradient(90deg, rgba(72, 69, 228, 1) 0%, rgba(87, 34, 205, 1) 100%);
-    color: #FFFFFF;
+    background: var(--blue);
+    background: linear-gradient(90deg, var(--blue) 0%, var(--purple) 100%);
+    color: var(--white);
     padding: 20px 0;
 }
 
@@ -152,37 +160,41 @@ header {
 }
 
 .nav-top a {
-    color: #FFFFFF;
+    color: var(--white);
+}
+
+.header-text {
+    padding: 100px 0;
+    margin-bottom: 88px;
 }
 
 .squiggle-line-stripe {
     width: 79px;
     height: 128px;
-    background-image: url(assets/squiggle_line_stripe.svg);
+    background-image: url("assets/squiggle_line_stripe.svg");
 }
 /* --------------- 4.2 Introduction ------------------- */
 
 .hello-text {
-    color: #5722CD;
+    color: var(--purple);
 }
 
 .hello-contact {
     font-size: 14px;
-    color: #000000;
+    color: var(--black);
     margin-top: 50px;
 }
 
 /* --------------- 4.3 Work ------------------- */
 
 #work {
-    background-color: #F3F6F9;
+    background-color: var(--light-grey);
 }
 
 .work-text-image {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /*margin-bottom: 20px;*/
 }
 
 .work-text-image:nth-child(even) {
@@ -226,16 +238,16 @@ header {
 .services-container {
     display: flex;
     flex-direction: row;
-    justify-content: center;
     flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
 }
 
 .services-container article {
-    border: 1px solid #5722CD;
+    border: 1px solid var(--purple);
     box-shadow: 2px 2px 12px #858585;
     padding: 30px;
-    margin: 20px;
-    flex-basis: 380px;
+    flex-basis: 378px;
     flex-grow: 0;
     flex-shrink: 1;
     display: flex;
@@ -249,9 +261,9 @@ header {
 /* --------------- 4.5 Form ------------------- */
 
 #contact {
-    background: rgb(72, 69, 228);
-    background: linear-gradient(90deg, rgba(72, 69, 228, 1) 0%, rgba(87, 34, 205, 1) 100%);
-    color: white;
+    background: var(--blue);
+    background: linear-gradient(90deg, var(--blue) 0%, var(--purple) 100%);
+    color: var(--white);
     padding: 60px 0 30px 0;
     font-size: 16px;
 }
@@ -272,6 +284,7 @@ form {
 .form-container input,
 .form-container textarea {
     border-radius: 4px;
+    border: 1px solid var(--grey);
     display: block;
     font-family: Roboto, serif;
     width: 100%;
@@ -286,9 +299,19 @@ form {
 /* --------------- 4.6 Footer ------------------- */
 
 footer {
-    background-color: black;
-    color: white;
+    background-color: var(--black);
+    color: var(--white);
     font-size: 14px;
     padding: 15px 0;
 }
 /* ------------------------------- 5. Media Queries -------------------------------- */
+
+@media screen and (max-width: 576px) {
+    .work-text-image {
+        display: block;
+    }
+
+    h1 {
+        font-size: 33px;
+    }
+}
