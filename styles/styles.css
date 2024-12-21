@@ -12,20 +12,388 @@
     5. Media Queries
 ////////////////////////*/
 
+/*Paars #5722CD;
+Blauw #4845E4;
+Roze #ED4385;
+Zwart #0C0C0C (voor standaard tekst);
+Lichtpaars #F2F0FF (voor de grote zwevende woorden, zoals "hello" en "services")
+Uitzonderingen:
+Lichtgrijs #F3F6F9 (voor de achtergrond van de projecten)
+Grijs #7A7A7A (voor de service-tegel tekst);*/
+
 /* ------------------------------- 1. Global Styles -------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Oleo+Script+Swash+Caps:wght@400;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Oleo+Script+Swash+Caps:wght@400;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    --purple: #5722CD;
+    --blue: #4845E4;
+    --pink: #ED4385;
+    --black: #0C0C0C; /* voor standaard tekst*/
+    --light-purple: #F2F0FF; /*voor de grote zwevende woorden, zoals "hello" en "services"*/
+    --light-grey: #F3F6F9; /*voor de achtergrond van de projecten*/
+    --grey: #7A7A7A; /* voor de service-tegel tekst*/
+    --white: #FFFFFF;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Roboto, serif;
+    font-weight: 300;
+    font-size: 20px;
+}
+
+button {
+    padding: 15px 25px;
+    margin: 20px;
+    border-radius: 20px;
+    border: transparent;
+    text-transform: uppercase;
+    font-size: 11px;
+    font-weight: 300;
+    background-color: var(--pink);
+    color: var(--white);
+    box-shadow: 0 1px 10px #303030;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+a, a:visited {
+    text-decoration-line: none;
+    color: var(--purple);
+}
 
 /* ------------------------------- 2. Typography ----------------------------------- */
 
+h1, h2, h3, h4, h5 {
+    font-family: Merriweather, serif;
+}
+
+h1 {
+    font-size: 40px;
+    line-height: 1.25;
+    padding: 15px 0;
+}
+
+h2 {
+    font-size: 35px;
+    line-height: 1.5;
+    padding: 12px 0;
+}
+
+h3 {
+    font-size: 40px;
+}
+
+h4 {
+    font-size: 35px;
+    padding-bottom: 10px;
+}
+
+h5 {
+    font-size: 22px;
+    color: var(--purple);
+    padding: 10px 0;
+}
+
+p {
+    margin: 30px 0;
+}
 /* ------------------------------- 3. Layout --------------------------------------- */
 
 /* --------------- 3.1 Reusables ----------------------- */
 
+.outer-content-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.inner-content-container {
+    flex-basis: 1400px;
+    flex-grow: 0;
+    flex-shrink: 1;
+    margin: 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 2;
+}
+
+.text-basic {
+    max-width: 850px;
+    text-align: center;
+}
+
+.padding-basic {
+    padding: 100px 0;
+}
 /* --------------- 3.2 Other --------------------------- */
+
+.slope-bottom {
+    border-bottom: 50px solid var(--white);
+    border-right: 100vw solid transparent;
+    position: absolute;
+    bottom: 0;
+}
+
+.slope-top {
+    border-top: 50px solid var(--white);
+    border-left: 100vw solid transparent;
+    position: absolute;
+    top: 0;
+}
+
+#hello::before {
+    content: 'hello';
+    color: var(--light-purple);
+    font-size: 550px;
+    opacity: 0.6;
+    font-weight: 600;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    letter-spacing: -19px;
+}
+
+#work::before {
+    content: 'work';
+    color: var(--white);
+    font-size: 550px;
+    font-weight: 600;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    width: 100%;
+    letter-spacing: -19px;
+}
+
+#services::before {
+    content: 'services';
+    color: var(--light-purple);
+    font-size: 300px;
+    opacity: 0.6;
+    font-weight: 600;
+    position: absolute;
+    text-align: center;
+    top: 55px;
+    width: 100%;
+    letter-spacing: -2px;
+}
 
 /* ------------------------------- 4. Areas ---------------------------------------- */
 
 /* --------------- 4.1 Header ------------------------- */
 
+header {
+    background: var(--blue);
+    background: linear-gradient(90deg, var(--blue) 0%, var(--purple) 100%);
+    color: var(--white);
+    position: relative;
+}
+
+.nav-top {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    padding: 20px 0;
+}
+
+.nav-top ul {
+    display: flex;
+    flex-basis: 400px;
+    justify-content: space-between;
+    list-style: none;
+}
+
+.nav-top a {
+    color: var(--white);
+}
+
+.header-text {
+    padding: 100px 0;
+}
+
+.squiggle-line-stripe {
+    width: 79px;
+    height: 110px;
+}
 /* --------------- 4.2 Introduction ------------------- */
 
+#hello {
+    position: relative;
+}
+
+.hello-text {
+    color: var(--purple);
+}
+
+.hello-contact {
+    font-size: 14px;
+    color: var(--black);
+    margin-top: 50px;
+}
+
+/* --------------- 4.3 Work ------------------- */
+
+#work {
+    background-color: var(--light-grey);
+    position: relative;
+    padding-top: 200px;
+}
+
+.work-text-image {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.work-text-image:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.work-text-image div {
+    flex-basis: 480px;
+    flex-grow: 0;
+    flex-shrink: 0;
+    padding: 15px 50px 15px 50px;
+}
+
+.squiggle-line {
+    height: 6px;
+    width: 57px;
+    margin-top: 15px;
+}
+
+.work-text-image a {
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.work-text-image a::after {
+    display: inline-block;
+    content: "";
+    width: 15px;
+    height: 1px;
+    margin: 0 0 4px 12px;
+    background-color: var(--purple);
+    transition: all .35s ease-in-out;
+}
+
+.work-text-image a:hover::after {
+    width: 55px;
+}
+
+.work-images {
+    flex-basis: 800px;
+    flex-grow: 0;
+    flex-shrink: 1;
+}
+
+.work-images img {
+    box-shadow: 0 5px 20px #303030;
+    width: 100%
+}
+
+/* --------------- 4.4 Services ------------------- */
+
+#services {
+    position: relative;
+    padding-top: 200px;
+}
+
+#services .slope-top {
+    border-top-color: var(--light-grey);
+}
+
+.services-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+}
+
+.services-container article {
+    border: 1px solid var(--purple);
+    box-shadow: 2px 2px 12px #858585;
+    background-color: var(--white);
+    padding: 30px;
+    flex-basis: 378px;
+    flex-grow: 0;
+    flex-shrink: 1;
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+}
+
+.services-container img {
+    width: 80px;
+}
+/* --------------- 4.5 Form ------------------- */
+
+#contact {
+    background: var(--blue);
+    background: linear-gradient(90deg, var(--blue) 0%, var(--purple) 100%);
+    color: var(--white);
+    padding: 90px 0 30px 0;
+    font-size: 16px;
+    position: relative;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    text-align: left;
+}
+
+.form-container label {
+    font-size: 16px;
+    font-weight: 500;
+    padding: 20px 0;
+}
+
+.form-container input,
+.form-container textarea {
+    border-radius: 4px;
+    border: 1px solid var(--grey);
+    display: block;
+    font-family: inherit;
+    width: 100%;
+    padding: 15px;
+}
+
+.form-container button {
+    width: 150px;
+    align-self: center;
+}
+
+/* --------------- 4.6 Footer ------------------- */
+
+footer {
+    background-color: var(--black);
+    color: var(--white);
+    font-size: 14px;
+    padding: 15px 0;
+}
 /* ------------------------------- 5. Media Queries -------------------------------- */
+
+@media screen and (max-width: 576px) {
+    .work-text-image {
+        display: block;
+    }
+
+    h1 {
+        font-size: 33px;
+    }
+}
