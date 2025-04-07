@@ -407,3 +407,64 @@ footer p {
 }
 
 /* ------------------------------- 5. Media Queries -------------------------------- */
+
+@media screen and (max-width: 576px){
+    h1 {
+        font-size: 35px;
+        padding-top: 0;
+    }
+
+    h2, h3 {
+        font-size: 25px;
+    }
+
+    .text-container {
+        padding-block: 70px;
+    }
+
+    nav {
+        justify-content: center;
+    }
+
+    #intro::before {
+        font-size: 170px;
+        letter-spacing: -4px;
+        top: 40px;
+    }
+
+    #work {
+        padding-top: 190px;
+    }
+
+    #work::before {
+        font-size: 170px;
+        letter-spacing: -4px;
+        top: 60px;
+    }
+
+    .container-work:nth-of-type(even),
+    .container-work{
+        flex-direction: column-reverse;
+
+        /*margin: 0;*/
+    }
+
+    .work-img-wrapper {
+        flex-basis: auto;
+    }
+
+    .text-container-work {
+        flex-basis: auto;
+        padding-top: 50px;
+    }
+
+    #services::before {
+        font-size: 120px;
+        top: 30px;
+    }
+
+    .services-container {
+        padding-top: 130px;
+    }
+
+}
